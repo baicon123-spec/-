@@ -89,20 +89,44 @@ body {
   font-size: 1.1rem;
 }
 
-.unit-card {
+.unit-list { display: flex; flex-direction: column; gap: 10px; }
+
+.accordion-card {
   background: var(--card);
   border: 1.5px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-.unit-header {
+.accordion-header {
   background: var(--navy);
   color: white;
-  padding: 12px 16px;
+  padding: 14px 16px;
   font-family: 'Black Han Sans', sans-serif;
   font-size: 0.95rem;
   letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  user-select: none;
+}
+.accordion-header:active { background: #1a2535; }
+.accordion-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.accordion-header.open .accordion-arrow {
+  transform: rotate(90deg);
+}
+.accordion-body {
+  display: none;
+  flex-direction: column;
+}
+.accordion-body.open {
+  display: flex;
+  animation: fadeUp 0.3s ease;
 }
 .page-list { display: flex; flex-direction: column; }
 .page-item {
@@ -477,11 +501,8 @@ body {
     <div class="home-title">영어 본문<br>복습 게임</div>
   </div>
   <div class="unit-section">
-    <div class="section-label">📖 페이지 선택</div>
-    <div class="unit-card">
-      <div class="unit-header">1단원 — Joy of Missing Out</div>
-      <div class="page-list" id="pageList"></div>
-    </div>
+    <div class="section-label">📖 단원 선택</div>
+    <div class="unit-list" id="unitList"></div>
   </div>
   <div class="home-disclaimer">
     <p>이 게임의 내용은 참고로만 사용해 주세요.</p>
@@ -779,36 +800,66 @@ let answerBlocks = [], poolBlocks = [], checked = false;
 
 // ══ 홈 화면 렌더 ══
 function renderHome() {
-  const pl = document.getElementById('pageList');
-  pl.innerHTML = '';
-  const unit = DATA[1];
-  Object.keys(unit.pages).forEach(pg => {
-    const count = unit.pages[pg].length;
-    const item = document.createElement('div');
-    item.className = 'page-item';
-    item.innerHTML = `
-      <div class="page-info">
-        <div class="page-num">p. ${pg}</div>
-        <div class="page-count">문장 ${count}개</div>
-      </div>
-      <div class="page-actions">
-        <button class="btn-mode btn-quiz" data-unit="1" data-page="${pg}" data-mode="quiz">🎮 퀴즈</button>
-        <button class="btn-mode btn-review" data-unit="1" data-page="${pg}" data-mode="review">📖 복습</button>
-      </div>`;
-    pl.appendChild(item);
-  });
+  const ul = document.getElementById('unitList');
+  ul.innerHTML = '';
 
-  // 페이지 버튼 이벤트 위임
-  pl.addEventListener('click', function(e) {
-    const btn = e.target.closest('.btn-mode');
-    if (!btn) return;
-    const unit = parseInt(btn.dataset.unit);
-    const page = btn.dataset.page;
-    const mode = btn.dataset.mode;
-    if (mode === 'quiz') startQuiz(unit, page);
-    else startReview(unit, page);
+  const units = {
+    1: { title: 'Joy of Missing Out', pages: DATA[1].pages }
+  };
+
+  Object.entries(units).forEach(([unitNum, unit]) => {
+    const card = document.createElement('div');
+    card.className = 'accordion-card';
+
+    const header = document.createElement('div');
+    header.className = 'accordion-header';
+    header.innerHTML = `<span>${unitNum}단원 — ${unit.title}</span><span class="accordion-arrow">▶</span>`;
+
+    const body = document.createElement('div');
+    body.className = 'accordion-body';
+
+    Object.keys(unit.pages).forEach(pg => {
+      const count = unit.pages[pg].length;
+      const item = document.createElement('div');
+      item.className = 'page-item';
+      item.innerHTML = `
+        <div class="page-info">
+          <div class="page-num">p. ${pg}</div>
+          <div class="page-count">문장 ${count}개</div>
+        </div>
+        <div class="page-actions">
+          <button class="btn-mode btn-quiz" data-unit="${unitNum}" data-page="${pg}" data-mode="quiz">🎮 문장 복습</button>
+          <button class="btn-mode btn-review" data-unit="${unitNum}" data-page="${pg}" data-mode="review">📖 내용 복습</button>
+        </div>`;
+      body.appendChild(item);
+    });
+
+    header.addEventListener('click', () => {
+      const isOpen = header.classList.contains('open');
+      document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('open'));
+      document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        header.classList.add('open');
+        body.classList.add('open');
+      }
+    });
+
+    body.addEventListener('click', function(e) {
+      const btn = e.target.closest('.btn-mode');
+      if (!btn) return;
+      const unit = btn.dataset.unit;
+      const page = btn.dataset.page;
+      const mode = btn.dataset.mode;
+      if (mode === 'quiz') startQuiz(unit, page);
+      else startReview(unit, page);
+    });
+
+    card.appendChild(header);
+    card.appendChild(body);
+    ul.appendChild(card);
   });
 }
+
 
 function goHome() {
   document.getElementById('homeScreen').style.display = 'flex';
@@ -857,7 +908,7 @@ let selectedAnswerIdxA = -1, selectedAnswerIdxB = -1;
 
 function startQuiz(unit, page) {
   currentUnit = unit; currentPage = page;
-  quizQuestions = shuffle([...DATA[unit].pages[page]]);
+  quizQuestions = [...DATA[unit].pages[page]];
   quizIdx = 0; score = 0;
   correctSet = new Set();
   document.getElementById('scoreVal').textContent = 0;
