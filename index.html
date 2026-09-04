@@ -147,7 +147,7 @@ body {
   color: var(--accent);
 }
 .page-count { font-size: 0.75rem; color: var(--navy); font-weight: 700; }
-.page-actions { display: flex; gap: 8px; }
+.page-actions { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .btn-mode {
   padding: 6px 12px;
   border-radius: 20px;
@@ -165,6 +165,14 @@ body {
 }
 .btn-quiz {
   background: var(--accent);
+  color: white;
+}
+.btn-write {
+  background: #27ae60;
+  color: white;
+}
+.btn-review {
+  background: var(--navy);
   color: white;
 }
 
@@ -829,6 +837,7 @@ function renderHome() {
         </div>
         <div class="page-actions">
           <button class="btn-mode btn-quiz" data-unit="${unitNum}" data-page="${pg}" data-mode="quiz">🎮 문장 복습</button>
+          <button class="btn-mode btn-write" data-unit="${unitNum}" data-page="${pg}" data-mode="write">✍️ 영작 훈련</button>
           <button class="btn-mode btn-review" data-unit="${unitNum}" data-page="${pg}" data-mode="review">📖 내용 복습</button>
         </div>`;
       body.appendChild(item);
@@ -850,7 +859,8 @@ function renderHome() {
       const unit = btn.dataset.unit;
       const page = btn.dataset.page;
       const mode = btn.dataset.mode;
-      if (mode === 'quiz') startQuiz(unit, page);
+      if (mode === 'quiz') startQuiz(unit, page, 'random');
+      else if (mode === 'write') startQuiz(unit, page, 'ko2en');
       else startReview(unit, page);
     });
 
@@ -906,14 +916,18 @@ let answerBlocksA = [], poolBlocksA = [];
 let answerBlocksB = [], poolBlocksB = [];
 let selectedAnswerIdxA = -1, selectedAnswerIdxB = -1;
 
-function startQuiz(unit, page) {
+let quizStartMode = 'random'; // 'random' | 'ko2en' | 'en2ko'
+
+function startQuiz(unit, page, mode = 'random') {
   currentUnit = unit; currentPage = page;
+  quizStartMode = mode;
   quizQuestions = [...DATA[unit].pages[page]];
   quizIdx = 0; score = 0;
   correctSet = new Set();
   document.getElementById('scoreVal').textContent = 0;
   document.getElementById('totalVal').textContent = quizQuestions.length;
-  document.getElementById('quizTitle').textContent = `1단원 · p.${page} 퀴즈`;
+  const modeLabel = mode === 'ko2en' ? '✍️ 영작 훈련' : '🎮 문장 복습';
+  document.getElementById('quizTitle').textContent = `${modeLabel} · p.${page}`;
   document.getElementById('homeScreen').style.display = 'none';
   document.getElementById('quizScreen').classList.add('show');
   document.getElementById('finalScreen').classList.remove('show');
@@ -931,8 +945,10 @@ function loadQuizQuestion() {
   answerBlocks = []; answerBlocksA = []; answerBlocksB = []; answerBlocksC = [];
   const q = quizQuestions[quizIdx];
 
-  // 50:50 랜덤으로 EN→KO 또는 KO→EN 선택
-  quizMode = Math.random() < 0.5 ? 'en2ko' : 'ko2en';
+  // 모드에 따라 EN↔KO 결정
+  if (quizStartMode === 'ko2en') quizMode = 'ko2en';
+  else if (quizStartMode === 'en2ko') quizMode = 'en2ko';
+  else quizMode = Math.random() < 0.5 ? 'en2ko' : 'ko2en';
 
   document.getElementById('progressBar').style.width = `${((quizIdx+1)/quizQuestions.length)*100}%`;
   document.getElementById('resultMsg').className = 'result-msg';
