@@ -516,7 +516,7 @@ body {
   </div>
   <div class="home-disclaimer">
     <p>이 게임의 내용은 참고로만 사용해 주세요.</p>
-    <p>업데이트 일시 : 2026년 09월 09일 16시 36분</p>
+    <p>업데이트 일시 : 2026년 11월 11일 14시 34분</p>
   </div>
 </div>
 
@@ -558,82 +558,8 @@ body {
         <div class="block-pool" id="blockPool"></div>
       </div>
     </div>
-    <!-- PAIR 문제 -->
-    <div id="pairQuestion" style="display:none; flex-direction:column; gap:16px;">
-      <div class="q-card">
-        <div class="q-label" id="qLabelA">📖 영어 문장 A</div>
-        <div class="q-sentence" id="qSentenceA"></div>
-      </div>
-      <div>
-        <div class="answer-label" id="answerLabelA">✏️ A 배열</div>
-        <div class="answer-zone" id="answerZoneA">
-          <div class="answer-placeholder">블록을 터치해서 순서대로 올려놓으세요</div>
-        </div>
-      </div>
-      <div>
-        <div class="pool-label">🔤 A 블록</div>
-        <div class="block-pool" id="blockPoolA"></div>
-      </div>
-      <div class="q-card">
-        <div class="q-label" id="qLabelB">📖 영어 문장 B</div>
-        <div class="q-sentence" id="qSentenceB"></div>
-      </div>
-      <div>
-        <div class="answer-label" id="answerLabelB">✏️ B 배열</div>
-        <div class="answer-zone" id="answerZoneB">
-          <div class="answer-placeholder">블록을 터치해서 순서대로 올려놓으세요</div>
-        </div>
-      </div>
-      <div>
-        <div class="pool-label">🔤 B 블록</div>
-        <div class="block-pool" id="blockPoolB"></div>
-      </div>
-    </div>
-    <!-- TRIPLE 문제 -->
-    <div id="tripleQuestion" style="display:none; flex-direction:column; gap:16px;">
-      <div class="q-card">
-        <div class="q-label" id="qLabelTA">📖 영어 문장 A</div>
-        <div class="q-sentence" id="qSentenceTA"></div>
-      </div>
-      <div>
-        <div class="answer-label" id="answerLabelTA">✏️ A 배열</div>
-        <div class="answer-zone" id="answerZoneTA">
-          <div class="answer-placeholder">블록을 터치해서 순서대로 올려놓으세요</div>
-        </div>
-      </div>
-      <div>
-        <div class="pool-label">🔤 A 블록</div>
-        <div class="block-pool" id="blockPoolTA"></div>
-      </div>
-      <div class="q-card">
-        <div class="q-label" id="qLabelTB">📖 영어 문장 B</div>
-        <div class="q-sentence" id="qSentenceTB"></div>
-      </div>
-      <div>
-        <div class="answer-label" id="answerLabelTB">✏️ B 배열</div>
-        <div class="answer-zone" id="answerZoneTB">
-          <div class="answer-placeholder">블록을 터치해서 순서대로 올려놓으세요</div>
-        </div>
-      </div>
-      <div>
-        <div class="pool-label">🔤 B 블록</div>
-        <div class="block-pool" id="blockPoolTB"></div>
-      </div>
-      <div class="q-card">
-        <div class="q-label" id="qLabelTC">📖 영어 문장 C</div>
-        <div class="q-sentence" id="qSentenceTC"></div>
-      </div>
-      <div>
-        <div class="answer-label" id="answerLabelTC">✏️ C 배열</div>
-        <div class="answer-zone" id="answerZoneTC">
-          <div class="answer-placeholder">블록을 터치해서 순서대로 올려놓으세요</div>
-        </div>
-      </div>
-      <div>
-        <div class="pool-label">🔤 C 블록</div>
-        <div class="block-pool" id="blockPoolTC"></div>
-      </div>
-    </div>
+    <!-- 2개 이상으로 나뉜 문제 (파트 수만큼 자동 생성) -->
+    <div id="multiQuestion" style="display:none; flex-direction:column; gap:16px;"></div>
     <div class="result-msg" id="resultMsg"></div>
     <div class="btn-row">
       <button class="btn btn-reset" id="btnReset">↩ 초기화</button>
@@ -863,6 +789,1830 @@ const DATA = {
         { type:'single', en: 'To make such connections, all you need is your imaginative power.', ko: '그런 연결들을 만들기 위해, / 당신이 필요한 모든 것은 / 당신의 상상력이다.', blocks: ['그런 연결들을 만들기 위해,','당신이 필요한 모든 것은','당신의 상상력이다.'], enBlocks: ['To make','such connections,','all you need','is your imaginative power.'] },
       ],
     }
+  },
+  3: {
+    "title": "The Future of Food",
+    "sections": {
+      "도입": {
+        "label": "도입 (p.61~62)",
+        "pages": [
+          "61",
+          "62"
+        ]
+      },
+      "Lab-grown Meat": {
+        "label": "Lab-grown Meat (p.63)",
+        "pages": [
+          "63"
+        ]
+      },
+      "Insects": {
+        "label": "Insects (p.64)",
+        "pages": [
+          "64"
+        ]
+      },
+      "3D Printed Food": {
+        "label": "3D Printed Food (p.65)",
+        "pages": [
+          "65"
+        ]
+      },
+      "Algae": {
+        "label": "Algae (p.66)",
+        "pages": [
+          "66"
+        ]
+      }
+    },
+    "pages": {
+      "61": [
+        {
+          "type": "single",
+          "en": "The Future of Food",
+          "ko": "미래의 음식",
+          "blocks": [
+            "미래의 음식"
+          ],
+          "enBlocks": [
+            "The Future of Food"
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Food is the essence of life",
+              "ko": "음식은 / 본질 / 삶의",
+              "blocks": [
+                "음식은",
+                "본질",
+                "삶의"
+              ],
+              "enBlocks": [
+                "Food is",
+                "the essence",
+                "of life"
+              ]
+            },
+            {
+              "en": "as it fuels us, brings us together,",
+              "ko": "왜냐하면 / 그것은 우리에게 힘을 주고, / 우리를 함께 모으고,",
+              "blocks": [
+                "왜냐하면",
+                "그것은 우리에게 힘을 주고,",
+                "우리를 함께 모으고,"
+              ],
+              "enBlocks": [
+                "as",
+                "it fuels us,",
+                "brings us together,"
+              ]
+            },
+            {
+              "en": "and connects communities to their cultures.",
+              "ko": "그리고 연결한다 / 공동체들을 / 그들의 문화에.",
+              "blocks": [
+                "그리고 연결한다",
+                "공동체들을",
+                "그들의 문화에."
+              ],
+              "enBlocks": [
+                "and connects",
+                "communities",
+                "to their cultures."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "What and how we eat is also crucial",
+              "ko": "무엇을 그리고 어떻게 / 우리가 먹는지는 / 이다 / 또한 중요한",
+              "blocks": [
+                "무엇을 그리고 어떻게",
+                "우리가 먹는지는",
+                "이다",
+                "또한 중요한"
+              ],
+              "enBlocks": [
+                "What and how",
+                "we eat",
+                "is",
+                "also crucial"
+              ]
+            },
+            {
+              "en": "in sustaining all life on this planet.",
+              "ko": "유지하는 데 / 모든 생명을 / 이 지구상의.",
+              "blocks": [
+                "유지하는 데",
+                "모든 생명을",
+                "이 지구상의."
+              ],
+              "enBlocks": [
+                "in sustaining",
+                "all life",
+                "on this planet."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "According to the UN population prospects report, by 2050,",
+              "ko": "~에 따르면 / 유엔 인구 / 전망 보고서에, / 2050년까지,",
+              "blocks": [
+                "~에 따르면",
+                "유엔 인구",
+                "전망 보고서에,",
+                "2050년까지,"
+              ],
+              "enBlocks": [
+                "According to",
+                "the UN population",
+                "prospects report,",
+                "by 2050,"
+              ]
+            },
+            {
+              "en": "the global population is expected to increase to around 10 billion.",
+              "ko": "세계 인구는 / 예상된다 / 증가할 것으로 / 약 100억 명까지.",
+              "blocks": [
+                "세계 인구는",
+                "예상된다",
+                "증가할 것으로",
+                "약 100억 명까지."
+              ],
+              "enBlocks": [
+                "the global population",
+                "is expected",
+                "to increase",
+                "to around 10 billion."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "This means that, to feed everyone,",
+              "ko": "이것은 의미한다, / 모두를 먹이기 위해서는,",
+              "blocks": [
+                "이것은 의미한다,",
+                "모두를 먹이기 위해서는,"
+              ],
+              "enBlocks": [
+                "This means that,",
+                "to feed everyone,"
+              ]
+            },
+            {
+              "en": "it will take 56% more food than is produced in the world today.",
+              "ko": "그것은 / 필요할 것이다 / 56% 더 많은 식량이 / 생산되는 것보다 / 오늘날 세계에서.",
+              "blocks": [
+                "그것은",
+                "필요할 것이다",
+                "56% 더 많은 식량이",
+                "생산되는 것보다",
+                "오늘날 세계에서."
+              ],
+              "enBlocks": [
+                "it",
+                "will take",
+                "56% more food",
+                "than is produced",
+                "in the world today."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Unfortunately, there is not enough agricultural land available",
+              "ko": "불행하게도, / 있다 / 충분하지 않은 / 농지가 / 이용 가능한",
+              "blocks": [
+                "불행하게도,",
+                "있다",
+                "충분하지 않은",
+                "농지가",
+                "이용 가능한"
+              ],
+              "enBlocks": [
+                "Unfortunately,",
+                "there is",
+                "not enough",
+                "agricultural land",
+                "available"
+              ]
+            },
+            {
+              "en": "to provide larger future populations with the kinds of diet",
+              "ko": "제공하기에는 / 더 많아질 미래 인구에게 / 그런 종류의 식단을",
+              "blocks": [
+                "제공하기에는",
+                "더 많아질 미래 인구에게",
+                "그런 종류의 식단을"
+              ],
+              "enBlocks": [
+                "to provide",
+                "larger future populations",
+                "with the kinds of diet"
+              ]
+            },
+            {
+              "en": "people are eating in most countries today.",
+              "ko": "사람들이 먹고 있는 / 오늘날 대부분의 나라에서.",
+              "blocks": [
+                "사람들이 먹고 있는",
+                "오늘날 대부분의 나라에서."
+              ],
+              "enBlocks": [
+                "people are eating",
+                "in most countries today."
+              ]
+            }
+          ]
+        }
+      ],
+      "62": [
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "In addition to this,",
+              "ko": "이것에 더하여,",
+              "blocks": [
+                "이것에 더하여,"
+              ],
+              "enBlocks": [
+                "In addition to this,"
+              ]
+            },
+            {
+              "en": "industrial food systems generate",
+              "ko": "산업 식품 시스템은 / 만들어낸다",
+              "blocks": [
+                "산업 식품 시스템은",
+                "만들어낸다"
+              ],
+              "enBlocks": [
+                "industrial food systems",
+                "generate"
+              ]
+            },
+            {
+              "en": "more than one third of all greenhouse gas emissions.",
+              "ko": "3분의 1 이상을 / 모든 온실가스 배출량의.",
+              "blocks": [
+                "3분의 1 이상을",
+                "모든 온실가스 배출량의."
+              ],
+              "enBlocks": [
+                "more than one third",
+                "of all greenhouse gas emissions."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "The processes we rely on to produce, transport, and",
+              "ko": "과정들은 / 우리가 의존하는 / 생산하고 운송하기 위해 / 그리고",
+              "blocks": [
+                "과정들은",
+                "우리가 의존하는",
+                "생산하고 운송하기 위해",
+                "그리고"
+              ],
+              "enBlocks": [
+                "The processes",
+                "we rely on",
+                "to produce, transport,",
+                "and"
+              ]
+            },
+            {
+              "en": "store meals and raw ingredients,",
+              "ko": "저장하기 위해 식사와 원재료를,",
+              "blocks": [
+                "저장하기 위해 식사와 원재료를,"
+              ],
+              "enBlocks": [
+                "store meals and raw ingredients,"
+              ]
+            },
+            {
+              "en": "not to mention the landfills covered with food waste,",
+              "ko": "말할 것도 없고 / 쓰레기 매립지들은 / 음식물 쓰레기로 뒤덮인,",
+              "blocks": [
+                "말할 것도 없고",
+                "쓰레기 매립지들은",
+                "음식물 쓰레기로 뒤덮인,"
+              ],
+              "enBlocks": [
+                "not to mention",
+                "the landfills",
+                "covered with food waste,"
+              ]
+            },
+            {
+              "en": "are speeding up climate change.",
+              "ko": "가속하고 있다 / 기후 변화를.",
+              "blocks": [
+                "가속하고 있다",
+                "기후 변화를."
+              ],
+              "enBlocks": [
+                "are speeding up",
+                "climate change."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Animal-based foods, including red meat,",
+              "ko": "동물성 식품들은, / 붉은 고기를 포함하여,",
+              "blocks": [
+                "동물성 식품들은,",
+                "붉은 고기를 포함하여,"
+              ],
+              "enBlocks": [
+                "Animal-based foods,",
+                "including red meat,"
+              ]
+            },
+            {
+              "en": "milk products, and farmed shrimp,",
+              "ko": "유제품, 그리고 양식 새우,",
+              "blocks": [
+                "유제품, 그리고 양식 새우,"
+              ],
+              "enBlocks": [
+                "milk products, and farmed shrimp,"
+              ]
+            },
+            {
+              "en": "are generally associated with the highest greenhouse gas emissions.",
+              "ko": "일반적으로 관련되어 있다 / 가장 높은 / 온실가스 배출량과.",
+              "blocks": [
+                "일반적으로 관련되어 있다",
+                "가장 높은",
+                "온실가스 배출량과."
+              ],
+              "enBlocks": [
+                "are generally associated",
+                "with the highest",
+                "greenhouse gas emissions."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Especially, our meat production accelerates",
+              "ko": "특히, / 우리의 고기 생산은 / 가속화한다",
+              "blocks": [
+                "특히,",
+                "우리의 고기 생산은",
+                "가속화한다"
+              ],
+              "enBlocks": [
+                "Especially,",
+                "our meat production",
+                "accelerates"
+              ]
+            },
+            {
+              "en": "global warming significantly,",
+              "ko": "지구 온난화를 / 상당히,",
+              "blocks": [
+                "지구 온난화를",
+                "상당히,"
+              ],
+              "enBlocks": [
+                "global warming",
+                "significantly,"
+              ]
+            },
+            {
+              "en": "uses shrinking supplies of fresh water,",
+              "ko": "사용하고 / 줄어드는 공급량을 / 담수의,",
+              "blocks": [
+                "사용하고",
+                "줄어드는 공급량을",
+                "담수의,"
+              ],
+              "enBlocks": [
+                "uses",
+                "shrinking supplies",
+                "of fresh water,"
+              ]
+            },
+            {
+              "en": "destroys forests and grasslands, and damages soil.",
+              "ko": "파괴하고 / 숲과 초원을, / 그리고 토양을 손상시킨다.",
+              "blocks": [
+                "파괴하고",
+                "숲과 초원을,",
+                "그리고 토양을 손상시킨다."
+              ],
+              "enBlocks": [
+                "destroys",
+                "forests and grasslands,",
+                "and damages soil."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "single",
+          "en": "Basically, we are in a tight bind of our own making.",
+          "ko": "기본적으로, / 우리는 있다 / 심각한 곤경에 / 우리 스스로 만든.",
+          "blocks": [
+            "기본적으로,",
+            "우리는 있다",
+            "심각한 곤경에",
+            "우리 스스로 만든."
+          ],
+          "enBlocks": [
+            "Basically,",
+            "we are",
+            "in a tight bind",
+            "of our own making."
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Against this reality,",
+              "ko": "이 현실에 맞서,",
+              "blocks": [
+                "이 현실에 맞서,"
+              ],
+              "enBlocks": [
+                "Against this reality,"
+              ]
+            },
+            {
+              "en": "it is vital for us to seek",
+              "ko": "필수적이다 / 우리에게 / 찾는 것이",
+              "blocks": [
+                "필수적이다",
+                "우리에게",
+                "찾는 것이"
+              ],
+              "enBlocks": [
+                "it is vital",
+                "for us",
+                "to seek"
+              ]
+            },
+            {
+              "en": "sustainable alternatives to our current diets.",
+              "ko": "지속 가능한 대안들을 / 우리의 현재 식단에 대한.",
+              "blocks": [
+                "지속 가능한 대안들을",
+                "우리의 현재 식단에 대한."
+              ],
+              "enBlocks": [
+                "sustainable alternatives",
+                "to our current diets."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "single",
+          "en": "Let us explore some ways we could be eating in the near future.",
+          "ko": "탐구해 보자 / 몇 가지 방법을 / 우리가 먹을 수 있는 / 가까운 미래에.",
+          "blocks": [
+            "탐구해 보자",
+            "몇 가지 방법을",
+            "우리가 먹을 수 있는",
+            "가까운 미래에."
+          ],
+          "enBlocks": [
+            "Let us explore",
+            "some ways",
+            "we could be eating",
+            "in the near future."
+          ]
+        }
+      ],
+      "63": [
+        {
+          "type": "single",
+          "en": "Lab-grown Meat",
+          "ko": "실험실에서 키운 고기",
+          "blocks": [
+            "실험실에서 키운 고기"
+          ],
+          "enBlocks": [
+            "Lab-grown Meat"
+          ]
+        },
+        {
+          "type": "single",
+          "en": "Lab-grown meat is animal flesh grown inside a laboratory.",
+          "ko": "실험실에서 키운 고기는 / 이다 / 동물의 살 / 길러진 / 실험실 안에서.",
+          "blocks": [
+            "실험실에서 키운 고기는",
+            "이다",
+            "동물의 살",
+            "길러진",
+            "실험실 안에서."
+          ],
+          "enBlocks": [
+            "Lab-grown meat",
+            "is",
+            "animal flesh",
+            "grown",
+            "inside a laboratory."
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "It is an alternative to red meat",
+              "ko": "그것은 / 대안이다 / 붉은 고기에 대한",
+              "blocks": [
+                "그것은",
+                "대안이다",
+                "붉은 고기에 대한"
+              ],
+              "enBlocks": [
+                "It",
+                "is an alternative",
+                "to red meat"
+              ]
+            },
+            {
+              "en": "obtained by increasingly unsustainable farming practices.",
+              "ko": "얻어지는 / 점점 지속 불가능한 / 농법들로.",
+              "blocks": [
+                "얻어지는",
+                "점점 지속 불가능한",
+                "농법들로."
+              ],
+              "enBlocks": [
+                "obtained",
+                "by increasingly unsustainable",
+                "farming practices."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Studies show that producing lab-grown meat",
+              "ko": "연구들은 / 보여준다 / 실험실 고기를 생산하는 것이",
+              "blocks": [
+                "연구들은",
+                "보여준다",
+                "실험실 고기를 생산하는 것이"
+              ],
+              "enBlocks": [
+                "Studies",
+                "show that",
+                "producing lab-grown meat"
+              ]
+            },
+            {
+              "en": "by using renewable energy",
+              "ko": "사용함으로써 / 재생 에너지를",
+              "blocks": [
+                "사용함으로써",
+                "재생 에너지를"
+              ],
+              "enBlocks": [
+                "by using",
+                "renewable energy"
+              ]
+            },
+            {
+              "en": "would have a significantly lower carbon footprint",
+              "ko": "가질 것이다 / 상당히 더 낮은 / 탄소 발자국을",
+              "blocks": [
+                "가질 것이다",
+                "상당히 더 낮은",
+                "탄소 발자국을"
+              ],
+              "enBlocks": [
+                "would have",
+                "a significantly lower",
+                "carbon footprint"
+              ]
+            },
+            {
+              "en": "than raising farm animals and making meat products",
+              "ko": "기르는 것보다 / 농장 동물을 / 그리고 만드는 것 / 육류 제품을",
+              "blocks": [
+                "기르는 것보다",
+                "농장 동물을",
+                "그리고 만드는 것",
+                "육류 제품을"
+              ],
+              "enBlocks": [
+                "than raising",
+                "farm animals",
+                "and making",
+                "meat products"
+              ]
+            },
+            {
+              "en": "in the most sustainable way.",
+              "ko": "가장 지속 가능한 방식으로.",
+              "blocks": [
+                "가장 지속 가능한 방식으로."
+              ],
+              "enBlocks": [
+                "in the most sustainable way."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "To begin with,",
+              "ko": "우선,",
+              "blocks": [
+                "우선,"
+              ],
+              "enBlocks": [
+                "To begin with,"
+              ]
+            },
+            {
+              "en": "lab scientists carefully remove",
+              "ko": "실험실 과학자들은 / 조심스럽게 떼어낸다",
+              "blocks": [
+                "실험실 과학자들은",
+                "조심스럽게 떼어낸다"
+              ],
+              "enBlocks": [
+                "lab scientists",
+                "carefully remove"
+              ]
+            },
+            {
+              "en": "a small number of cells from an animal.",
+              "ko": "소수의 세포를 / 동물에게서.",
+              "blocks": [
+                "소수의 세포를",
+                "동물에게서."
+              ],
+              "enBlocks": [
+                "a small number of cells",
+                "from an animal."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Then, they multiply and grow the harvested cells,",
+              "ko": "그런 다음, / 그들은 증식시키고 / 그리고 키운다 / 채취한 세포를,",
+              "blocks": [
+                "그런 다음,",
+                "그들은 증식시키고",
+                "그리고 키운다",
+                "채취한 세포를,"
+              ],
+              "enBlocks": [
+                "Then,",
+                "they multiply",
+                "and grow",
+                "the harvested cells,"
+              ]
+            },
+            {
+              "en": "and they produce real tissue, which is quite similar to conventional meat",
+              "ko": "그리고 / 그들은 만들어낸다 / 진짜 조직을, / 그것은 꽤 비슷하다 / 기존의 고기와",
+              "blocks": [
+                "그리고",
+                "그들은 만들어낸다",
+                "진짜 조직을,",
+                "그것은 꽤 비슷하다",
+                "기존의 고기와"
+              ],
+              "enBlocks": [
+                "and",
+                "they produce",
+                "real tissue,",
+                "which is quite similar",
+                "to conventional meat"
+              ]
+            },
+            {
+              "en": "in terms of texture and smell.",
+              "ko": "~의 측면에서 / 질감과 냄새.",
+              "blocks": [
+                "~의 측면에서",
+                "질감과 냄새."
+              ],
+              "enBlocks": [
+                "in terms of",
+                "texture and smell."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "In this way, they can transform",
+              "ko": "이런 방식으로, / 그들은 바꿀 수 있다",
+              "blocks": [
+                "이런 방식으로,",
+                "그들은 바꿀 수 있다"
+              ],
+              "enBlocks": [
+                "In this way,",
+                "they can transform"
+              ]
+            },
+            {
+              "en": "lab-grown cells into steak, chicken breasts, or hamburger meat.",
+              "ko": "실험실에서 키운 세포를 / 스테이크로, / 닭 가슴살로, / 또는 햄버거 고기로.",
+              "blocks": [
+                "실험실에서 키운 세포를",
+                "스테이크로,",
+                "닭 가슴살로,",
+                "또는 햄버거 고기로."
+              ],
+              "enBlocks": [
+                "lab-grown cells",
+                "into steak,",
+                "chicken breasts,",
+                "or hamburger meat."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "The final product itself is",
+              "ko": "최종 제품은 / 그 자체로 / 이다",
+              "blocks": [
+                "최종 제품은",
+                "그 자체로",
+                "이다"
+              ],
+              "enBlocks": [
+                "The final product",
+                "itself",
+                "is"
+              ]
+            },
+            {
+              "en": "a real cut of meat, ready to be cooked.",
+              "ko": "진짜 고기 한 덩어리, / 요리될 준비가 된.",
+              "blocks": [
+                "진짜 고기 한 덩어리,",
+                "요리될 준비가 된."
+              ],
+              "enBlocks": [
+                "a real cut of meat,",
+                "ready to be cooked."
+              ]
+            }
+          ]
+        }
+      ],
+      "64": [
+        {
+          "type": "single",
+          "en": "Insects",
+          "ko": "곤충",
+          "blocks": [
+            "곤충"
+          ],
+          "enBlocks": [
+            "Insects"
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Even though eating insects",
+              "ko": "비록 ~일지라도 / 곤충을 먹는 것이",
+              "blocks": [
+                "비록 ~일지라도",
+                "곤충을 먹는 것이"
+              ],
+              "enBlocks": [
+                "Even though",
+                "eating insects"
+              ]
+            },
+            {
+              "en": "may seem strange to some people,",
+              "ko": "보일 수 있다 / 이상하게 / 어떤 사람들에게는,",
+              "blocks": [
+                "보일 수 있다",
+                "이상하게",
+                "어떤 사람들에게는,"
+              ],
+              "enBlocks": [
+                "may seem",
+                "strange",
+                "to some people,"
+              ]
+            },
+            {
+              "en": "they have been part of",
+              "ko": "그것들은 / ~해 왔다 / 일부로서",
+              "blocks": [
+                "그것들은",
+                "~해 왔다",
+                "일부로서"
+              ],
+              "enBlocks": [
+                "they",
+                "have been",
+                "part of"
+              ]
+            },
+            {
+              "en": "human diets for a very long time.",
+              "ko": "인간 식단의 / 아주 오랜 시간 동안.",
+              "blocks": [
+                "인간 식단의",
+                "아주 오랜 시간 동안."
+              ],
+              "enBlocks": [
+                "human diets",
+                "for a very long time."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "single",
+          "en": "In fact, insect eating is practiced in about 130 countries!",
+          "ko": "사실, / 곤충 식용은 / 행해진다 / 약 130개국에서!",
+          "blocks": [
+            "사실,",
+            "곤충 식용은",
+            "행해진다",
+            "약 130개국에서!"
+          ],
+          "enBlocks": [
+            "In fact,",
+            "insect eating",
+            "is practiced",
+            "in about 130 countries!"
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Insects will be important",
+              "ko": "곤충은 / 될 것이다 / 중요한",
+              "blocks": [
+                "곤충은",
+                "될 것이다",
+                "중요한"
+              ],
+              "enBlocks": [
+                "Insects",
+                "will be",
+                "important"
+              ]
+            },
+            {
+              "en": "in the fight against hunger and climate change.",
+              "ko": "싸움에서 / 굶주림에 맞선 / 그리고 기후 변화에 맞선.",
+              "blocks": [
+                "싸움에서",
+                "굶주림에 맞선",
+                "그리고 기후 변화에 맞선."
+              ],
+              "enBlocks": [
+                "in the fight",
+                "against hunger",
+                "and climate change."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "They use much fewer resources than farm animals",
+              "ko": "그것들은 사용한다 / 훨씬 적은 자원을 / 농장 동물보다",
+              "blocks": [
+                "그것들은 사용한다",
+                "훨씬 적은 자원을",
+                "농장 동물보다"
+              ],
+              "enBlocks": [
+                "They use",
+                "much fewer resources",
+                "than farm animals"
+              ]
+            },
+            {
+              "en": "to produce the same amount of protein",
+              "ko": "생산하기 위해 / 같은 양의 단백질을",
+              "blocks": [
+                "생산하기 위해",
+                "같은 양의 단백질을"
+              ],
+              "enBlocks": [
+                "to produce",
+                "the same amount of protein"
+              ]
+            },
+            {
+              "en": "and can be raised on food waste,",
+              "ko": "그리고 길러질 수 있다 / 음식물 쓰레기로,",
+              "blocks": [
+                "그리고 길러질 수 있다",
+                "음식물 쓰레기로,"
+              ],
+              "enBlocks": [
+                "and can be raised",
+                "on food waste,"
+              ]
+            },
+            {
+              "en": "which makes raising them very cost-effective.",
+              "ko": "그것은 만든다 / 그것들을 기르는 것을 / 매우 비용 효율적으로.",
+              "blocks": [
+                "그것은 만든다",
+                "그것들을 기르는 것을",
+                "매우 비용 효율적으로."
+              ],
+              "enBlocks": [
+                "which makes",
+                "raising them",
+                "very cost-effective."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "The main barrier to using insects as a source of protein",
+              "ko": "주된 장벽은 / 곤충을 사용하는 데 / 단백질 공급원으로서",
+              "blocks": [
+                "주된 장벽은",
+                "곤충을 사용하는 데",
+                "단백질 공급원으로서"
+              ],
+              "enBlocks": [
+                "The main barrier",
+                "to using insects",
+                "as a source of protein"
+              ]
+            },
+            {
+              "en": "is the negative image they have.",
+              "ko": "이다 / 부정적인 이미지 / 그것들이 가진.",
+              "blocks": [
+                "이다",
+                "부정적인 이미지",
+                "그것들이 가진."
+              ],
+              "enBlocks": [
+                "is",
+                "the negative image",
+                "they have."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Insects are associated with disease and dirt,",
+              "ko": "곤충은 / 연관된다 / 질병과 더러움과,",
+              "blocks": [
+                "곤충은",
+                "연관된다",
+                "질병과 더러움과,"
+              ],
+              "enBlocks": [
+                "Insects",
+                "are associated",
+                "with disease and dirt,"
+              ]
+            },
+            {
+              "en": "so manufacturers of insect food products",
+              "ko": "그래서 / 제조업체들은 / 곤충 식품의",
+              "blocks": [
+                "그래서",
+                "제조업체들은",
+                "곤충 식품의"
+              ],
+              "enBlocks": [
+                "so",
+                "manufacturers",
+                "of insect food products"
+              ]
+            },
+            {
+              "en": "must overcome this to successfully win the public over.",
+              "ko": "이것을 극복해야 한다 / 성공적으로 대중을 사로잡기 위해.",
+              "blocks": [
+                "이것을 극복해야 한다",
+                "성공적으로 대중을 사로잡기 위해."
+              ],
+              "enBlocks": [
+                "must overcome this",
+                "to successfully win the public over."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "One solution has been to change the look of the insects,",
+              "ko": "한 가지 해결책은 / 되어 왔다 / 바꾸는 것 / 겉모습을 / 곤충의,",
+              "blocks": [
+                "한 가지 해결책은",
+                "되어 왔다",
+                "바꾸는 것",
+                "겉모습을",
+                "곤충의,"
+              ],
+              "enBlocks": [
+                "One solution",
+                "has been",
+                "to change",
+                "the look",
+                "of the insects,"
+              ]
+            },
+            {
+              "en": "by drying and grinding them into powder.",
+              "ko": "말리고 갈아서 / 그것들을 / 가루로.",
+              "blocks": [
+                "말리고 갈아서",
+                "그것들을",
+                "가루로."
+              ],
+              "enBlocks": [
+                "by drying and grinding",
+                "them",
+                "into powder."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Rich in protein, insect flour is gaining popularity",
+              "ko": "단백질이 풍부한, / 곤충 가루는 / 얻고 있다 / 인기를",
+              "blocks": [
+                "단백질이 풍부한,",
+                "곤충 가루는",
+                "얻고 있다",
+                "인기를"
+              ],
+              "enBlocks": [
+                "Rich in protein,",
+                "insect flour",
+                "is gaining",
+                "popularity"
+              ]
+            },
+            {
+              "en": "as a healthier replacement for wheat flour.",
+              "ko": "더 건강한 대체품으로서 / 밀가루의.",
+              "blocks": [
+                "더 건강한 대체품으로서",
+                "밀가루의."
+              ],
+              "enBlocks": [
+                "as a healthier replacement",
+                "for wheat flour."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "In addition, insect oils are a promising field;",
+              "ko": "게다가, / 곤충 기름은 / 이다 / 유망한 분야;",
+              "blocks": [
+                "게다가,",
+                "곤충 기름은",
+                "이다",
+                "유망한 분야;"
+              ],
+              "enBlocks": [
+                "In addition,",
+                "insect oils",
+                "are",
+                "a promising field;"
+              ]
+            },
+            {
+              "en": "they are already being used in some parts of the world for cooking.",
+              "ko": "그것들은 / 이미 사용되고 있다 / 세계의 일부 지역에서 / 요리에.",
+              "blocks": [
+                "그것들은",
+                "이미 사용되고 있다",
+                "세계의 일부 지역에서",
+                "요리에."
+              ],
+              "enBlocks": [
+                "they",
+                "are already being used",
+                "in some parts of the world",
+                "for cooking."
+              ]
+            }
+          ]
+        }
+      ],
+      "65": [
+        {
+          "type": "single",
+          "en": "3D Printed Food",
+          "ko": "3D로 출력한 음식",
+          "blocks": [
+            "3D로 출력한 음식"
+          ],
+          "enBlocks": [
+            "3D Printed Food"
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "3D food printing has the potential",
+              "ko": "3D 음식 프린팅은 / 가지고 있다 / 잠재력을",
+              "blocks": [
+                "3D 음식 프린팅은",
+                "가지고 있다",
+                "잠재력을"
+              ],
+              "enBlocks": [
+                "3D food printing",
+                "has",
+                "the potential"
+              ]
+            },
+            {
+              "en": "to save the environment,",
+              "ko": "구할 / 환경을,",
+              "blocks": [
+                "구할",
+                "환경을,"
+              ],
+              "enBlocks": [
+                "to save",
+                "the environment,"
+              ]
+            },
+            {
+              "en": "while revolutionizing food production;",
+              "ko": "동시에 혁신하면서 / 식품 생산을;",
+              "blocks": [
+                "동시에 혁신하면서",
+                "식품 생산을;"
+              ],
+              "enBlocks": [
+                "while revolutionizing",
+                "food production;"
+              ]
+            },
+            {
+              "en": "for example, it can convert alternative ingredients",
+              "ko": "예를 들어, / 그것은 바꿀 수 있다 / 대체 재료를",
+              "blocks": [
+                "예를 들어,",
+                "그것은 바꿀 수 있다",
+                "대체 재료를"
+              ],
+              "enBlocks": [
+                "for example,",
+                "it can convert",
+                "alternative ingredients"
+              ]
+            },
+            {
+              "en": "such as proteins from insects into delicious meals.",
+              "ko": "단백질 같은 / 곤충에서 나온 / 맛있는 식사로.",
+              "blocks": [
+                "단백질 같은",
+                "곤충에서 나온",
+                "맛있는 식사로."
+              ],
+              "enBlocks": [
+                "such as proteins",
+                "from insects",
+                "into delicious meals."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "The underlying concept for food printing",
+              "ko": "기본 개념은 / 음식 프린팅의",
+              "blocks": [
+                "기본 개념은",
+                "음식 프린팅의"
+              ],
+              "enBlocks": [
+                "The underlying concept",
+                "for food printing"
+              ]
+            },
+            {
+              "en": "is the same as any other 3D printing.",
+              "ko": "이다 / 같은 / 다른 어떤 / 3D 프린팅과.",
+              "blocks": [
+                "이다",
+                "같은",
+                "다른 어떤",
+                "3D 프린팅과."
+              ],
+              "enBlocks": [
+                "is",
+                "the same",
+                "as any other",
+                "3D printing."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "In 3D food printing, various inks",
+              "ko": "3D 음식 프린팅에서, / 다양한 잉크가",
+              "blocks": [
+                "3D 음식 프린팅에서,",
+                "다양한 잉크가"
+              ],
+              "enBlocks": [
+                "In 3D food printing,",
+                "various inks"
+              ]
+            },
+            {
+              "en": "– liquid forms of food – are placed one layer at a time",
+              "ko": "– 액체 형태의 음식 – / 놓인다 / 한 층씩 / 한 번에",
+              "blocks": [
+                "– 액체 형태의 음식 –",
+                "놓인다",
+                "한 층씩",
+                "한 번에"
+              ],
+              "enBlocks": [
+                "– liquid forms of food –",
+                "are placed",
+                "one layer",
+                "at a time"
+              ]
+            },
+            {
+              "en": "to build complex 3D constructs",
+              "ko": "만들기 위해 / 복잡한 3D 구조물을",
+              "blocks": [
+                "만들기 위해",
+                "복잡한 3D 구조물을"
+              ],
+              "enBlocks": [
+                "to build",
+                "complex 3D constructs"
+              ]
+            },
+            {
+              "en": "with full textures and customized nutrients.",
+              "ko": "완전한 질감을 갖춘 / 그리고 맞춤형 영양소를.",
+              "blocks": [
+                "완전한 질감을 갖춘",
+                "그리고 맞춤형 영양소를."
+              ],
+              "enBlocks": [
+                "with full textures",
+                "and customized nutrients."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "3D food printing can be readily undertaken",
+              "ko": "3D 음식 프린팅은 / 될 수 있다 / 쉽게 이루어지도록",
+              "blocks": [
+                "3D 음식 프린팅은",
+                "될 수 있다",
+                "쉽게 이루어지도록"
+              ],
+              "enBlocks": [
+                "3D food printing",
+                "can be",
+                "readily undertaken"
+              ]
+            },
+            {
+              "en": "in many parts of the globe.",
+              "ko": "많은 지역에서 / 전 세계의.",
+              "blocks": [
+                "많은 지역에서",
+                "전 세계의."
+              ],
+              "enBlocks": [
+                "in many parts",
+                "of the globe."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Various food inks with adequate nutrients and favorable flavors",
+              "ko": "다양한 음식 잉크는 / 충분한 영양소를 갖춘 / 그리고 좋은 맛을 가진",
+              "blocks": [
+                "다양한 음식 잉크는",
+                "충분한 영양소를 갖춘",
+                "그리고 좋은 맛을 가진"
+              ],
+              "enBlocks": [
+                "Various food inks",
+                "with adequate nutrients",
+                "and favorable flavors"
+              ]
+            },
+            {
+              "en": "can be sent to areas that are hard to get to,",
+              "ko": "보내질 수 있다 / 지역들로 / 가기 어려운,",
+              "blocks": [
+                "보내질 수 있다",
+                "지역들로",
+                "가기 어려운,"
+              ],
+              "enBlocks": [
+                "can be sent",
+                "to areas",
+                "that are hard to get to,"
+              ]
+            },
+            {
+              "en": "where food can be printed on site.",
+              "ko": "그곳에서 음식은 / 출력될 수 있다 / 현장에서.",
+              "blocks": [
+                "그곳에서 음식은",
+                "출력될 수 있다",
+                "현장에서."
+              ],
+              "enBlocks": [
+                "where food",
+                "can be printed",
+                "on site."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "In this way, 3D printed food with necessary nutrients",
+              "ko": "이런 방식으로, / 3D로 출력된 음식은 / 필요한 영양소를 갖춘",
+              "blocks": [
+                "이런 방식으로,",
+                "3D로 출력된 음식은",
+                "필요한 영양소를 갖춘"
+              ],
+              "enBlocks": [
+                "In this way,",
+                "3D printed food",
+                "with necessary nutrients"
+              ]
+            },
+            {
+              "en": "can be provided for large populations",
+              "ko": "제공될 수 있다 / 많은 인구에게",
+              "blocks": [
+                "제공될 수 있다",
+                "많은 인구에게"
+              ],
+              "enBlocks": [
+                "can be provided",
+                "for large populations"
+              ]
+            },
+            {
+              "en": "in areas affected by a natural disaster or a crisis developed by humans.",
+              "ko": "지역에서 / 자연재해로 영향받은 / 또는 위기로 / 인간이 일으킨.",
+              "blocks": [
+                "지역에서",
+                "자연재해로 영향받은",
+                "또는 위기로",
+                "인간이 일으킨."
+              ],
+              "enBlocks": [
+                "in areas",
+                "affected by a natural disaster",
+                "or a crisis",
+                "developed by humans."
+              ]
+            }
+          ]
+        }
+      ],
+      "66": [
+        {
+          "type": "single",
+          "en": "Algae",
+          "ko": "조류(藻類)",
+          "blocks": [
+            "조류(藻類)"
+          ],
+          "enBlocks": [
+            "Algae"
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Algae are the fastest growing plant organisms in nature",
+              "ko": "조류는 / 이다 / 가장 빨리 자라는 / 식물성 생물체 / 자연에서",
+              "blocks": [
+                "조류는",
+                "이다",
+                "가장 빨리 자라는",
+                "식물성 생물체",
+                "자연에서"
+              ],
+              "enBlocks": [
+                "Algae",
+                "are",
+                "the fastest growing",
+                "plant organisms",
+                "in nature"
+              ]
+            },
+            {
+              "en": "and a great alternative source of vitamins, proteins, and minerals.",
+              "ko": "그리고 훌륭한 대체 공급원 / 비타민, / 단백질, / 그리고 미네랄의.",
+              "blocks": [
+                "그리고 훌륭한 대체 공급원",
+                "비타민,",
+                "단백질,",
+                "그리고 미네랄의."
+              ],
+              "enBlocks": [
+                "and a great alternative source",
+                "of vitamins,",
+                "proteins,",
+                "and minerals."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "Not only full of nutrients, they are also easy to grow",
+              "ko": "~뿐만 아니라 / 영양소가 가득한, / 그것들은 / 또한 이다 / 키우기 쉬운",
+              "blocks": [
+                "~뿐만 아니라",
+                "영양소가 가득한,",
+                "그것들은",
+                "또한 이다",
+                "키우기 쉬운"
+              ],
+              "enBlocks": [
+                "Not only",
+                "full of nutrients,",
+                "they",
+                "are also",
+                "easy to grow"
+              ]
+            },
+            {
+              "en": "and don’t take up precious land space",
+              "ko": "그리고 / 차지하지 않는다 / 소중한 땅 공간을",
+              "blocks": [
+                "그리고",
+                "차지하지 않는다",
+                "소중한 땅 공간을"
+              ],
+              "enBlocks": [
+                "and",
+                "don’t take up",
+                "precious land space"
+              ]
+            },
+            {
+              "en": "as they are grown in water.",
+              "ko": "왜냐하면 그것들은 / 길러진다 / 물에서.",
+              "blocks": [
+                "왜냐하면 그것들은",
+                "길러진다",
+                "물에서."
+              ],
+              "enBlocks": [
+                "as they",
+                "are grown",
+                "in water."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "They can grow in places",
+              "ko": "그것들은 / 자랄 수 있다 / 장소들에서",
+              "blocks": [
+                "그것들은",
+                "자랄 수 있다",
+                "장소들에서"
+              ],
+              "enBlocks": [
+                "They",
+                "can grow",
+                "in places"
+              ]
+            },
+            {
+              "en": "where normal food crops wouldn’t survive",
+              "ko": "일반적인 식량 작물이 / 살아남지 못할",
+              "blocks": [
+                "일반적인 식량 작물이",
+                "살아남지 못할"
+              ],
+              "enBlocks": [
+                "where normal food crops",
+                "wouldn’t survive"
+              ]
+            },
+            {
+              "en": "and yield much higher productivity",
+              "ko": "그리고 낳는다 / 훨씬 더 높은 생산성을",
+              "blocks": [
+                "그리고 낳는다",
+                "훨씬 더 높은 생산성을"
+              ],
+              "enBlocks": [
+                "and yield",
+                "much higher productivity"
+              ]
+            },
+            {
+              "en": "than crops grown on land.",
+              "ko": "작물보다 / 땅에서 자란.",
+              "blocks": [
+                "작물보다",
+                "땅에서 자란."
+              ],
+              "enBlocks": [
+                "than crops",
+                "grown on land."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "single",
+          "en": "In addition, they create very rich habitats for plants and animals.",
+          "ko": "게다가, / 그것들은 만든다 / 매우 풍부한 서식지를 / 식물과 동물을 위한.",
+          "blocks": [
+            "게다가,",
+            "그것들은 만든다",
+            "매우 풍부한 서식지를",
+            "식물과 동물을 위한."
+          ],
+          "enBlocks": [
+            "In addition,",
+            "they create",
+            "very rich habitats",
+            "for plants and animals."
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "On top of that, algae are very good at trapping carbon themselves,",
+              "ko": "그뿐 아니라, / 조류는 / 매우 뛰어나다 / 탄소를 가두는 데 / 스스로,",
+              "blocks": [
+                "그뿐 아니라,",
+                "조류는",
+                "매우 뛰어나다",
+                "탄소를 가두는 데",
+                "스스로,"
+              ],
+              "enBlocks": [
+                "On top of that,",
+                "algae",
+                "are very good",
+                "at trapping carbon",
+                "themselves,"
+              ]
+            },
+            {
+              "en": "which helps slow down global warming.",
+              "ko": "그것은 돕는다 / 늦추는 것을 / 지구 온난화를.",
+              "blocks": [
+                "그것은 돕는다",
+                "늦추는 것을",
+                "지구 온난화를."
+              ],
+              "enBlocks": [
+                "which helps",
+                "slow down",
+                "global warming."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "single",
+          "en": "Individual diets are complex and culturally influenced.",
+          "ko": "개인의 식단은 / 이다 / 복잡한 / 그리고 문화적으로 영향받는.",
+          "blocks": [
+            "개인의 식단은",
+            "이다",
+            "복잡한",
+            "그리고 문화적으로 영향받는."
+          ],
+          "enBlocks": [
+            "Individual diets",
+            "are",
+            "complex",
+            "and culturally influenced."
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "It is a huge task to change one’s diet",
+              "ko": "그것은 ~이다 / 엄청난 일 / 바꾸는 것은 / 자신의 식단을",
+              "blocks": [
+                "그것은 ~이다",
+                "엄청난 일",
+                "바꾸는 것은",
+                "자신의 식단을"
+              ],
+              "enBlocks": [
+                "It is",
+                "a huge task",
+                "to change",
+                "one’s diet"
+              ]
+            },
+            {
+              "en": "to reduce the impact of food on climate,",
+              "ko": "줄이기 위해 / 음식의 영향을 / 기후에 미치는,",
+              "blocks": [
+                "줄이기 위해",
+                "음식의 영향을",
+                "기후에 미치는,"
+              ],
+              "enBlocks": [
+                "to reduce",
+                "the impact of food",
+                "on climate,"
+              ]
+            },
+            {
+              "en": "and not everyone can or will take the step forward.",
+              "ko": "그리고 / 모든 사람이 아니다 / 내디딜 수 있거나 내디딜 / 앞으로 가는 한 걸음을.",
+              "blocks": [
+                "그리고",
+                "모든 사람이 아니다",
+                "내디딜 수 있거나 내디딜",
+                "앞으로 가는 한 걸음을."
+              ],
+              "enBlocks": [
+                "and",
+                "not everyone",
+                "can or will take",
+                "the step forward."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "multi",
+          "parts": [
+            {
+              "en": "However, with the increasing demand for food",
+              "ko": "하지만, / 증가하는 음식 수요와 함께",
+              "blocks": [
+                "하지만,",
+                "증가하는 음식 수요와 함께"
+              ],
+              "enBlocks": [
+                "However,",
+                "with the increasing demand for food"
+              ]
+            },
+            {
+              "en": "and its effects on global warming,",
+              "ko": "그리고 그것의 영향 / 지구 온난화에 미치는,",
+              "blocks": [
+                "그리고 그것의 영향",
+                "지구 온난화에 미치는,"
+              ],
+              "enBlocks": [
+                "and its effects",
+                "on global warming,"
+              ]
+            },
+            {
+              "en": "we ourselves need to start considering bringing changes to our diets.",
+              "ko": "우리 스스로 / 시작해야 한다 / 고려하기를 / 변화를 가져오는 것을 / 우리의 식단에.",
+              "blocks": [
+                "우리 스스로",
+                "시작해야 한다",
+                "고려하기를",
+                "변화를 가져오는 것을",
+                "우리의 식단에."
+              ],
+              "enBlocks": [
+                "we ourselves",
+                "need to start",
+                "considering",
+                "bringing changes",
+                "to our diets."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "single",
+          "en": "It’s time for everyone to be a little more familiar with the unfamiliar.",
+          "ko": "때이다 / 모두가 / 되어야 할 / 조금 더 익숙한 / 낯선 것에.",
+          "blocks": [
+            "때이다",
+            "모두가",
+            "되어야 할",
+            "조금 더 익숙한",
+            "낯선 것에."
+          ],
+          "enBlocks": [
+            "It’s time",
+            "for everyone",
+            "to be",
+            "a little more familiar",
+            "with the unfamiliar."
+          ]
+        }
+      ]
+    }
   }
 };
 
@@ -981,6 +2731,21 @@ function startReview(unit, page) {
   startReviewWithData(questions, title);
 }
 
+// 문제 유형(single / pair / triple / multi)을 파트 배열로 통일
+function getParts(q) {
+  if (q.parts) return q.parts;
+  if (q.type === 'triple') return [
+    { en: q.enA, ko: q.koA, blocks: q.blocksA, enBlocks: q.enBlocksA },
+    { en: q.enB, ko: q.koB, blocks: q.blocksB, enBlocks: q.enBlocksB },
+    { en: q.enC, ko: q.koC, blocks: q.blocksC, enBlocks: q.enBlocksC }
+  ];
+  if (q.type === 'pair') return [
+    { en: q.enA, ko: q.koA, blocks: q.blocksA, enBlocks: q.enBlocksA },
+    { en: q.enB, ko: q.koB, blocks: q.blocksB, enBlocks: q.enBlocksB }
+  ];
+  return [{ en: q.en, ko: q.ko, blocks: q.blocks, enBlocks: q.enBlocks }];
+}
+
 function startReviewWithData(questions, title) {
   document.getElementById('homeScreen').style.display = 'none';
   document.getElementById('reviewTitle').textContent = title;
@@ -988,23 +2753,15 @@ function startReviewWithData(questions, title) {
   const content = document.getElementById('reviewContent');
   content.innerHTML = '';
   let num = 1;
+  const slash = s => s.replace(/\//g,'<span style="color:var(--accent2);font-weight:800;padding:0 2px;">/</span>');
+  const arrow = ' <span style="color:var(--accent2)">↓</span> ';
   questions.forEach((q) => {
+    const parts = getParts(q);
     const card = document.createElement('div');
     card.className = 'review-card';
-    const slash = s => s.replace(/\//g,'<span style="color:var(--accent2);font-weight:800;padding:0 2px;">/</span>');
-    if (q.type === 'triple') {
-      card.innerHTML = `
-        <div class="review-card-en"><div class="review-num">${num++}</div>${q.enA} ${q.enB} ${q.enC}</div>
-        <div class="review-card-ko">${slash(q.koA)} <span style="color:var(--accent2)">↓</span> ${slash(q.koB)} <span style="color:var(--accent2)">↓</span> ${slash(q.koC)}</div>`;
-    } else if (q.type === 'pair') {
-      card.innerHTML = `
-        <div class="review-card-en"><div class="review-num">${num++}</div>${q.enA} ${q.enB}</div>
-        <div class="review-card-ko">${slash(q.koA)} <span style="color:var(--accent2)">↓</span> ${slash(q.koB)}</div>`;
-    } else {
-      card.innerHTML = `
-        <div class="review-card-en"><div class="review-num">${num++}</div>${q.en}</div>
-        <div class="review-card-ko">${slash(q.ko)}</div>`;
-    }
+    card.innerHTML = `
+      <div class="review-card-en"><div class="review-num">${num++}</div>${parts.map(p => p.en).join(' ')}</div>
+      <div class="review-card-ko">${parts.map(p => slash(p.ko)).join(arrow)}</div>`;
     content.appendChild(card);
   });
   document.getElementById('reviewScreen').classList.add('show');
@@ -1012,11 +2769,10 @@ function startReviewWithData(questions, title) {
 
 // ══ 퀴즈 모드 ══
 let correctSet = new Set();
-let answerBlocksA = [], poolBlocksA = [];
-let answerBlocksB = [], poolBlocksB = [];
-let selectedAnswerIdxA = -1, selectedAnswerIdxB = -1;
-
 let quizStartMode = 'random'; // 'random' | 'ko2en' | 'en2ko'
+let quizMode = 'en2ko';       // 현재 문제의 방향
+let selectedAnswerIdx = -1;   // 한 문장 문제에서 선택된 블록
+let mPool = [], mAnswer = [], mSel = []; // 여러 파트 문제: 파트별 블록 풀 / 배열 / 선택
 
 function startQuiz(unit, page, mode = 'random') {
   const questions = DATA[unit].pages[page];
@@ -1040,112 +2796,6 @@ function startQuizWithData(questions, title, mode = 'random') {
   loadQuizQuestion();
 }
 
-let quizMode = 'en2ko'; // 현재 문제 모드
-let answerBlocksC = [], poolBlocksC = [];
-let selectedAnswerIdxC = -1;
-
-function loadQuizQuestion() {
-  checked = false;
-  selectedAnswerIdx = -1; selectedAnswerIdxA = -1; selectedAnswerIdxB = -1; selectedAnswerIdxC = -1;
-  answerBlocks = []; answerBlocksA = []; answerBlocksB = []; answerBlocksC = [];
-  const q = quizQuestions[quizIdx];
-
-  // 모드에 따라 EN↔KO 결정
-  if (quizStartMode === 'ko2en') quizMode = 'ko2en';
-  else if (quizStartMode === 'en2ko') quizMode = 'en2ko';
-  else quizMode = Math.random() < 0.5 ? 'en2ko' : 'ko2en';
-
-  document.getElementById('progressBar').style.width = `${((quizIdx+1)/quizQuestions.length)*100}%`;
-  document.getElementById('resultMsg').className = 'result-msg';
-  document.getElementById('btnCheck').style.display = 'flex';
-  document.getElementById('btnNext').style.display = 'none';
-
-  if (q.type === 'triple') {
-    document.getElementById('singleQuestion').style.display = 'none';
-    document.getElementById('pairQuestion').style.display = 'none';
-    document.getElementById('tripleQuestion').style.display = 'flex';
-    if (quizMode === 'ko2en') {
-      document.getElementById('qSentenceTA').textContent = q.koA.replace(/\//g, ' ');
-      document.getElementById('qSentenceTB').textContent = q.koB.replace(/\//g, ' ');
-      document.getElementById('qSentenceTC').textContent = q.koC.replace(/\//g, ' ');
-      document.getElementById('qLabelTA').textContent = '🇰🇷 한국어 문장 A';
-      document.getElementById('qLabelTB').textContent = '🇰🇷 한국어 문장 B';
-      document.getElementById('qLabelTC').textContent = '🇰🇷 한국어 문장 C';
-      document.getElementById('answerLabelTA').textContent = '✏️ 영어로 배열하세요 A';
-      document.getElementById('answerLabelTB').textContent = '✏️ 영어로 배열하세요 B';
-      document.getElementById('answerLabelTC').textContent = '✏️ 영어로 배열하세요 C';
-      poolBlocksA = shuffle([...q.enBlocksA]);
-      poolBlocksB = shuffle([...q.enBlocksB]);
-      poolBlocksC = shuffle([...q.enBlocksC]);
-    } else {
-      document.getElementById('qSentenceTA').textContent = q.enA;
-      document.getElementById('qSentenceTB').textContent = q.enB;
-      document.getElementById('qSentenceTC').textContent = q.enC;
-      document.getElementById('qLabelTA').textContent = '📖 영어 문장 A';
-      document.getElementById('qLabelTB').textContent = '📖 영어 문장 B';
-      document.getElementById('qLabelTC').textContent = '📖 영어 문장 C';
-      document.getElementById('answerLabelTA').textContent = '✏️ A 배열';
-      document.getElementById('answerLabelTB').textContent = '✏️ B 배열';
-      document.getElementById('answerLabelTC').textContent = '✏️ C 배열';
-      poolBlocksA = shuffle([...q.blocksA]);
-      poolBlocksB = shuffle([...q.blocksB]);
-      poolBlocksC = shuffle([...q.blocksC]);
-    }
-    document.getElementById('answerZoneTA').className = 'answer-zone';
-    document.getElementById('answerZoneTB').className = 'answer-zone';
-    document.getElementById('answerZoneTC').className = 'answer-zone';
-    renderTriplePool('A'); renderTripleAnswer('A');
-    renderTriplePool('B'); renderTripleAnswer('B');
-    renderTriplePool('C'); renderTripleAnswer('C');
-  } else if (q.type === 'pair') {
-    document.getElementById('singleQuestion').style.display = 'none';
-    document.getElementById('pairQuestion').style.display = 'flex';
-    document.getElementById('tripleQuestion').style.display = 'none';
-    if (quizMode === 'ko2en') {
-      document.getElementById('qSentenceA').textContent = q.koA.replace(/\//g, ' ');
-      document.getElementById('qSentenceB').textContent = q.koB.replace(/\//g, ' ');
-      document.getElementById('qLabelA').textContent = '🇰🇷 한국어 문장 A';
-      document.getElementById('qLabelB').textContent = '🇰🇷 한국어 문장 B';
-      document.getElementById('answerLabelA').textContent = '✏️ 영어로 배열하세요 A';
-      document.getElementById('answerLabelB').textContent = '✏️ 영어로 배열하세요 B';
-      poolBlocksA = shuffle([...q.enBlocksA]);
-      poolBlocksB = shuffle([...q.enBlocksB]);
-    } else {
-      document.getElementById('qSentenceA').textContent = q.enA;
-      document.getElementById('qSentenceB').textContent = q.enB;
-      document.getElementById('qLabelA').textContent = '📖 영어 문장 A';
-      document.getElementById('qLabelB').textContent = '📖 영어 문장 B';
-      document.getElementById('answerLabelA').textContent = '✏️ A 배열';
-      document.getElementById('answerLabelB').textContent = '✏️ B 배열';
-      poolBlocksA = shuffle([...q.blocksA]);
-      poolBlocksB = shuffle([...q.blocksB]);
-    }
-    document.getElementById('answerZoneA').className = 'answer-zone';
-    document.getElementById('answerZoneB').className = 'answer-zone';
-    renderPairPool('A'); renderPairAnswer('A');
-    renderPairPool('B'); renderPairAnswer('B');
-  } else {
-    document.getElementById('singleQuestion').style.display = 'block';
-    document.getElementById('pairQuestion').style.display = 'none';
-    document.getElementById('tripleQuestion').style.display = 'none';
-    if (quizMode === 'ko2en') {
-      document.getElementById('qLabel').textContent = '🇰🇷 한국어 문장';
-      document.getElementById('qSentence').textContent = q.ko.replace(/\//g, ' ');
-      document.getElementById('answerLabel').textContent = '✏️ 영어로 배열하세요';
-      document.getElementById('poolLabel').textContent = '🔤 영어 블록';
-      poolBlocks = shuffle([...q.enBlocks]);
-    } else {
-      document.getElementById('qLabel').textContent = '📖 영어 문장';
-      document.getElementById('qSentence').textContent = q.en;
-      document.getElementById('answerLabel').textContent = '✏️ 순서대로 배열하세요';
-      document.getElementById('poolLabel').textContent = '🔤 한국어 블록';
-      poolBlocks = shuffle([...q.blocks]);
-    }
-    document.getElementById('answerZone').className = 'answer-zone';
-    renderPool(); renderAnswer();
-  }
-}
-
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length-1; i > 0; i--) {
@@ -1155,6 +2805,48 @@ function shuffle(arr) {
   return a;
 }
 
+const PART_LETTERS = 'ABCDEFGH';
+function correctOf(p) { return quizMode === 'ko2en' ? p.enBlocks : p.blocks; }
+
+function loadQuizQuestion() {
+  checked = false;
+  selectedAnswerIdx = -1;
+  answerBlocks = [];
+  const q = quizQuestions[quizIdx];
+  const parts = getParts(q);
+
+  // 모드에 따라 EN↔KO 결정
+  if (quizStartMode === 'ko2en') quizMode = 'ko2en';
+  else if (quizStartMode === 'en2ko') quizMode = 'en2ko';
+  else quizMode = Math.random() < 0.5 ? 'en2ko' : 'ko2en';
+  const ko2en = quizMode === 'ko2en';
+
+  document.getElementById('progressBar').style.width = `${((quizIdx+1)/quizQuestions.length)*100}%`;
+  document.getElementById('resultMsg').className = 'result-msg';
+  document.getElementById('btnCheck').style.display = 'flex';
+  document.getElementById('btnNext').style.display = 'none';
+
+  const single = document.getElementById('singleQuestion');
+  const multi = document.getElementById('multiQuestion');
+  if (parts.length === 1) {
+    single.style.display = 'block';
+    multi.style.display = 'none';
+    const p = parts[0];
+    document.getElementById('qLabel').textContent = ko2en ? '🇰🇷 한국어 문장' : '📖 영어 문장';
+    document.getElementById('qSentence').textContent = ko2en ? p.ko.replace(/\//g, ' ') : p.en;
+    document.getElementById('answerLabel').textContent = ko2en ? '✏️ 영어로 배열하세요' : '✏️ 순서대로 배열하세요';
+    document.getElementById('poolLabel').textContent = ko2en ? '🔤 영어 블록' : '🔤 한국어 블록';
+    poolBlocks = shuffle([...correctOf(p)]);
+    document.getElementById('answerZone').className = 'answer-zone';
+    renderPool(); renderAnswer();
+  } else {
+    single.style.display = 'none';
+    multi.style.display = 'flex';
+    buildMulti(parts, ko2en);
+  }
+}
+
+// ── 한 문장 문제 ──
 function renderPool() {
   const pool = document.getElementById('blockPool');
   pool.innerHTML = '';
@@ -1166,8 +2858,6 @@ function renderPool() {
     pool.appendChild(b);
   });
 }
-
-let selectedAnswerIdx = -1;
 
 function renderAnswer() {
   const zone = document.getElementById('answerZone');
@@ -1208,258 +2898,183 @@ function moveToAnswer(i) {
   renderPool(); renderAnswer();
 }
 
-function renderPairPool(ab) {
-  const pool = document.getElementById(`blockPool${ab}`);
-  const blocks = ab === 'A' ? poolBlocksA : poolBlocksB;
-  pool.innerHTML = '';
-  blocks.forEach((text, i) => {
-    const b = document.createElement('div');
-    b.className = 'block';
-    b.textContent = text;
-    b.onclick = () => movePairToAnswer(ab, i);
-    pool.appendChild(b);
+// ── 여러 파트 문제 (PAIR·TRIPLE·4분할·5분할 …) ──
+function buildMulti(parts, ko2en) {
+  mPool = parts.map(p => shuffle([...correctOf(p)]));
+  mAnswer = parts.map(() => []);
+  mSel = parts.map(() => -1);
+  const box = document.getElementById('multiQuestion');
+  box.innerHTML = '';
+  parts.forEach((p, k) => {
+    const L = PART_LETTERS[k];
+    const card = document.createElement('div');
+    card.className = 'q-card';
+    const lab = document.createElement('div');
+    lab.className = 'q-label';
+    lab.textContent = (ko2en ? '🇰🇷 한국어 문장 ' : '📖 영어 문장 ') + L;
+    const sent = document.createElement('div');
+    sent.className = 'q-sentence';
+    sent.textContent = ko2en ? p.ko.replace(/\//g, ' ') : p.en;
+    card.appendChild(lab); card.appendChild(sent);
+
+    const ansWrap = document.createElement('div');
+    const al = document.createElement('div');
+    al.className = 'answer-label';
+    al.textContent = ko2en ? `✏️ 영어로 배열하세요 ${L}` : `✏️ ${L} 배열`;
+    const zone = document.createElement('div');
+    zone.className = 'answer-zone';
+    zone.id = 'mAns' + k;
+    ansWrap.appendChild(al); ansWrap.appendChild(zone);
+
+    const poolWrap = document.createElement('div');
+    const pl = document.createElement('div');
+    pl.className = 'pool-label';
+    pl.textContent = `🔤 ${L} 블록`;
+    const pool = document.createElement('div');
+    pool.className = 'block-pool';
+    pool.id = 'mPool' + k;
+    poolWrap.appendChild(pl); poolWrap.appendChild(pool);
+
+    box.appendChild(card); box.appendChild(ansWrap); box.appendChild(poolWrap);
+    renderMultiPart(k);
   });
 }
 
-function renderPairAnswer(ab) {
-  const zone = document.getElementById(`answerZone${ab}`);
-  const blocks = ab === 'A' ? answerBlocksA : answerBlocksB;
-  const selIdx = ab === 'A' ? selectedAnswerIdxA : selectedAnswerIdxB;
+function renderMultiPart(k) {
+  const pool = document.getElementById('mPool' + k);
+  pool.innerHTML = '';
+  mPool[k].forEach((text, i) => {
+    const b = document.createElement('div');
+    b.className = 'block';
+    b.textContent = text;
+    b.onclick = () => moveToAnswerM(k, i);
+    pool.appendChild(b);
+  });
+  const zone = document.getElementById('mAns' + k);
   zone.innerHTML = '';
-  if (!blocks.length) {
+  if (!mAnswer[k].length) {
     const p = document.createElement('div');
     p.className = 'answer-placeholder';
     p.textContent = '블록을 터치해서 순서대로 올려놓으세요';
     zone.appendChild(p);
+    mSel[k] = -1;
     return;
   }
-  blocks.forEach((text, idx) => {
+  mAnswer[k].forEach((text, idx) => {
     const b = document.createElement('div');
-    b.className = 'block in-answer' + (idx === selIdx ? ' selected-block' : '');
+    b.className = 'block in-answer' + (idx === mSel[k] ? ' selected-block' : '');
     b.textContent = text;
-    if (!checked) b.onclick = () => tapPairAnswerBlock(ab, idx);
+    if (!checked) b.onclick = () => tapAnswerM(k, idx);
     zone.appendChild(b);
   });
 }
 
-function renderTriplePool(abc) {
-  const pool = document.getElementById(`blockPoolT${abc}`);
-  const blocks = abc === 'A' ? poolBlocksA : abc === 'B' ? poolBlocksB : poolBlocksC;
-  pool.innerHTML = '';
-  blocks.forEach((text, i) => {
-    const b = document.createElement('div');
-    b.className = 'block';
-    b.textContent = text;
-    b.onclick = () => moveTripleToAnswer(abc, i);
-    pool.appendChild(b);
-  });
+function moveToAnswerM(k, i) {
+  if (checked) return;
+  mAnswer[k].push(mPool[k][i]);
+  mPool[k].splice(i, 1);
+  renderMultiPart(k);
 }
 
-function renderTripleAnswer(abc) {
-  const zone = document.getElementById(`answerZoneT${abc}`);
-  const blocks = abc === 'A' ? answerBlocksA : abc === 'B' ? answerBlocksB : answerBlocksC;
-  const selIdx = abc === 'A' ? selectedAnswerIdxA : abc === 'B' ? selectedAnswerIdxB : selectedAnswerIdxC;
-  zone.innerHTML = '';
-  if (!blocks.length) {
-    const p = document.createElement('div');
-    p.className = 'answer-placeholder';
-    p.textContent = '블록을 터치해서 순서대로 올려놓으세요';
-    zone.appendChild(p);
-    return;
+function tapAnswerM(k, i) {
+  if (checked) return;
+  if (mSel[k] === -1) { mSel[k] = i; }
+  else if (mSel[k] === i) { mSel[k] = -1; }
+  else {
+    const tmp = mAnswer[k][mSel[k]];
+    mAnswer[k][mSel[k]] = mAnswer[k][i];
+    mAnswer[k][i] = tmp;
+    mSel[k] = -1;
   }
-  blocks.forEach((text, idx) => {
-    const b = document.createElement('div');
-    b.className = 'block in-answer' + (idx === selIdx ? ' selected-block' : '');
-    b.textContent = text;
-    if (!checked) b.onclick = () => tapTripleAnswerBlock(abc, idx);
-    zone.appendChild(b);
-  });
+  renderMultiPart(k);
 }
 
-function tapTripleAnswerBlock(abc, i) {
-  if (checked) return;
-  const blocks = abc === 'A' ? answerBlocksA : abc === 'B' ? answerBlocksB : answerBlocksC;
-  const selIdx = abc === 'A' ? selectedAnswerIdxA : abc === 'B' ? selectedAnswerIdxB : selectedAnswerIdxC;
-  if (selIdx === -1) {
-    if (abc === 'A') selectedAnswerIdxA = i;
-    else if (abc === 'B') selectedAnswerIdxB = i;
-    else selectedAnswerIdxC = i;
-    renderTripleAnswer(abc);
-  } else if (selIdx === i) {
-    if (abc === 'A') selectedAnswerIdxA = -1;
-    else if (abc === 'B') selectedAnswerIdxB = -1;
-    else selectedAnswerIdxC = -1;
-    renderTripleAnswer(abc);
-  } else {
-    const tmp = blocks[selIdx];
-    blocks[selIdx] = blocks[i]; blocks[i] = tmp;
-    if (abc === 'A') selectedAnswerIdxA = -1;
-    else if (abc === 'B') selectedAnswerIdxB = -1;
-    else selectedAnswerIdxC = -1;
-    renderTripleAnswer(abc);
-  }
-}
-
-function moveTripleToAnswer(abc, i) {
-  if (checked) return;
-  if (abc === 'A') { answerBlocksA.push(poolBlocksA[i]); poolBlocksA.splice(i,1); }
-  else if (abc === 'B') { answerBlocksB.push(poolBlocksB[i]); poolBlocksB.splice(i,1); }
-  else { answerBlocksC.push(poolBlocksC[i]); poolBlocksC.splice(i,1); }
-  renderTriplePool(abc); renderTripleAnswer(abc);
-}
-
-function tapPairAnswerBlock(ab, i) {
-  if (checked) return;
-  const blocks = ab === 'A' ? answerBlocksA : answerBlocksB;
-  const selIdx = ab === 'A' ? selectedAnswerIdxA : selectedAnswerIdxB;
-  if (selIdx === -1) {
-    if (ab === 'A') selectedAnswerIdxA = i; else selectedAnswerIdxB = i;
-    renderPairAnswer(ab);
-  } else if (selIdx === i) {
-    if (ab === 'A') selectedAnswerIdxA = -1; else selectedAnswerIdxB = -1;
-    renderPairAnswer(ab);
-  } else {
-    const tmp = blocks[selIdx];
-    blocks[selIdx] = blocks[i]; blocks[i] = tmp;
-    if (ab === 'A') selectedAnswerIdxA = -1; else selectedAnswerIdxB = -1;
-    renderPairAnswer(ab);
-  }
-}
-
-function movePairToAnswer(ab, i) {
-  if (checked) return;
-  if (ab === 'A') { answerBlocksA.push(poolBlocksA[i]); poolBlocksA.splice(i,1); }
-  else { answerBlocksB.push(poolBlocksB[i]); poolBlocksB.splice(i,1); }
-  renderPairPool(ab); renderPairAnswer(ab);
-}
-
+// ── 초기화 ──
 function resetAnswer() {
   checked = false;
-  selectedAnswerIdx = -1; selectedAnswerIdxA = -1; selectedAnswerIdxB = -1; selectedAnswerIdxC = -1;
+  selectedAnswerIdx = -1;
   const q = quizQuestions[quizIdx];
+  const parts = getParts(q);
   document.getElementById('resultMsg').className = 'result-msg';
   document.getElementById('btnCheck').style.display = 'flex';
   document.getElementById('btnNext').style.display = 'none';
-  if (q.type === 'triple') {
-    poolBlocksA = shuffle([...(quizMode === 'ko2en' ? q.enBlocksA : q.blocksA)]); answerBlocksA = [];
-    poolBlocksB = shuffle([...(quizMode === 'ko2en' ? q.enBlocksB : q.blocksB)]); answerBlocksB = [];
-    poolBlocksC = shuffle([...(quizMode === 'ko2en' ? q.enBlocksC : q.blocksC)]); answerBlocksC = [];
-    document.getElementById('answerZoneTA').className = 'answer-zone';
-    document.getElementById('answerZoneTB').className = 'answer-zone';
-    document.getElementById('answerZoneTC').className = 'answer-zone';
-    renderTriplePool('A'); renderTripleAnswer('A');
-    renderTriplePool('B'); renderTripleAnswer('B');
-    renderTriplePool('C'); renderTripleAnswer('C');
-  } else if (q.type === 'pair') {
-    poolBlocksA = shuffle([...(quizMode === 'ko2en' ? q.enBlocksA : q.blocksA)]); answerBlocksA = [];
-    poolBlocksB = shuffle([...(quizMode === 'ko2en' ? q.enBlocksB : q.blocksB)]); answerBlocksB = [];
-    document.getElementById('answerZoneA').className = 'answer-zone';
-    document.getElementById('answerZoneB').className = 'answer-zone';
-    renderPairPool('A'); renderPairAnswer('A');
-    renderPairPool('B'); renderPairAnswer('B');
-  } else {
-    poolBlocks = shuffle([...(quizMode === 'ko2en' ? q.enBlocks : q.blocks)]); answerBlocks = [];
+  if (parts.length === 1) {
+    poolBlocks = shuffle([...correctOf(parts[0])]);
+    answerBlocks = [];
     document.getElementById('answerZone').className = 'answer-zone';
     renderPool(); renderAnswer();
+  } else {
+    mPool = parts.map(p => shuffle([...correctOf(p)]));
+    mAnswer = parts.map(() => []);
+    mSel = parts.map(() => -1);
+    parts.forEach((p, k) => {
+      document.getElementById('mAns' + k).className = 'answer-zone';
+      renderMultiPart(k);
+    });
   }
+}
+
+// ── 정답 확인 ──
+function markCorrect(zone, got, want) {
+  zone.querySelectorAll('.block').forEach((b, i) => {
+    b.className = got[i] === want[i] ? 'block correct-block' : 'block wrong-block';
+  });
 }
 
 function checkAnswer() {
   const q = quizQuestions[quizIdx];
+  const parts = getParts(q);
   const msg = document.getElementById('resultMsg');
+  const want = parts.map(correctOf);
+  let isCorrect;
 
-  if (q.type === 'triple') {
-    if (!answerBlocksA.length || !answerBlocksB.length || !answerBlocksC.length) {
-      msg.className = 'result-msg wrong';
-      msg.textContent = '⚠️ A, B, C 모두 블록을 배치해주세요!';
-      return;
-    }
-    const cA = quizMode === 'ko2en' ? q.enBlocksA : q.blocksA;
-    const cB = quizMode === 'ko2en' ? q.enBlocksB : q.blocksB;
-    const cC = quizMode === 'ko2en' ? q.enBlocksC : q.blocksC;
-    if (answerBlocksA.length < cA.length || answerBlocksB.length < cB.length || answerBlocksC.length < cC.length) {
-      msg.className = 'result-msg wrong';
-      msg.textContent = '⚠️ 모든 블록을 배치해주세요!';
-      return;
-    }
-    checked = true;
-    const okA = JSON.stringify(answerBlocksA) === JSON.stringify(cA);
-    const okB = JSON.stringify(answerBlocksB) === JSON.stringify(cB);
-    const okC = JSON.stringify(answerBlocksC) === JSON.stringify(cC);
-    const isCorrect = okA && okB && okC;
-    const zA = document.getElementById('answerZoneTA');
-    const zB = document.getElementById('answerZoneTB');
-    const zC = document.getElementById('answerZoneTC');
-    zA.querySelectorAll('.block').forEach((b,i) => { b.className = answerBlocksA[i] === cA[i] ? 'block correct-block' : 'block wrong-block'; });
-    zB.querySelectorAll('.block').forEach((b,i) => { b.className = answerBlocksB[i] === cB[i] ? 'block correct-block' : 'block wrong-block'; });
-    zC.querySelectorAll('.block').forEach((b,i) => { b.className = answerBlocksC[i] === cC[i] ? 'block correct-block' : 'block wrong-block'; });
-    zA.className = 'answer-zone ' + (okA ? 'correct-zone' : 'wrong-zone');
-    zB.className = 'answer-zone ' + (okB ? 'correct-zone' : 'wrong-zone');
-    zC.className = 'answer-zone ' + (okC ? 'correct-zone' : 'wrong-zone');
-    if (isCorrect) {
-      if (!correctSet.has(quizIdx)) { correctSet.add(quizIdx); score = correctSet.size; document.getElementById('scoreVal').textContent = score; }
-      msg.className = 'result-msg correct';
-      msg.textContent = '🎉 정답입니다!';
-    } else {
-      msg.className = 'result-msg wrong';
-      msg.textContent = '❌ 틀렸어요!';
-      setTimeout(() => { if (checked) msg.textContent = '💡 A: ' + cA.join(' → ') + ' / B: ' + cB.join(' → ') + ' / C: ' + cC.join(' → '); }, 1100);
-    }
-  } else if (q.type === 'pair') {
-    if (!answerBlocksA.length || !answerBlocksB.length) {
-      msg.className = 'result-msg wrong';
-      msg.textContent = '⚠️ A, B 모두 블록을 배치해주세요!';
-      return;
-    }
-    const cA = quizMode === 'ko2en' ? q.enBlocksA : q.blocksA;
-    const cB = quizMode === 'ko2en' ? q.enBlocksB : q.blocksB;
-    if (answerBlocksA.length < cA.length || answerBlocksB.length < cB.length) {
-      msg.className = 'result-msg wrong';
-      msg.textContent = '⚠️ 모든 블록을 배치해주세요!';
-      return;
-    }
-    checked = true;
-    const okA = JSON.stringify(answerBlocksA) === JSON.stringify(cA);
-    const okB = JSON.stringify(answerBlocksB) === JSON.stringify(cB);
-    const isCorrect = okA && okB;
-    const zA = document.getElementById('answerZoneA');
-    const zB = document.getElementById('answerZoneB');
-    zA.querySelectorAll('.block').forEach((b,i) => { b.className = answerBlocksA[i] === cA[i] ? 'block correct-block' : 'block wrong-block'; });
-    zB.querySelectorAll('.block').forEach((b,i) => { b.className = answerBlocksB[i] === cB[i] ? 'block correct-block' : 'block wrong-block'; });
-    zA.className = 'answer-zone ' + (okA ? 'correct-zone' : 'wrong-zone');
-    zB.className = 'answer-zone ' + (okB ? 'correct-zone' : 'wrong-zone');
-    if (isCorrect) {
-      if (!correctSet.has(quizIdx)) { correctSet.add(quizIdx); score = correctSet.size; document.getElementById('scoreVal').textContent = score; }
-      msg.className = 'result-msg correct';
-      msg.textContent = '🎉 정답입니다!';
-    } else {
-      msg.className = 'result-msg wrong';
-      msg.textContent = '❌ 틀렸어요!';
-      setTimeout(() => { if (checked) msg.textContent = '💡 A: ' + cA.join(' → ') + ' / B: ' + cB.join(' → '); }, 1100);
-    }
-  } else {
-    const correctBlocks = quizMode === 'ko2en' ? q.enBlocks : q.blocks;
+  if (parts.length === 1) {
     if (!answerBlocks.length) return;
-    if (answerBlocks.length < correctBlocks.length) {
+    if (answerBlocks.length < want[0].length) {
       msg.className = 'result-msg wrong';
       msg.textContent = '⚠️ 모든 블록을 배치해주세요!';
       return;
     }
     checked = true;
-    const isCorrect = JSON.stringify(answerBlocks) === JSON.stringify(correctBlocks);
+    isCorrect = JSON.stringify(answerBlocks) === JSON.stringify(want[0]);
     const zone = document.getElementById('answerZone');
-    zone.querySelectorAll('.block').forEach((b,i) => { b.className = answerBlocks[i] === correctBlocks[i] ? 'block correct-block' : 'block wrong-block'; });
-    if (isCorrect) {
-      if (!correctSet.has(quizIdx)) { correctSet.add(quizIdx); score = correctSet.size; document.getElementById('scoreVal').textContent = score; }
-      zone.className = 'answer-zone correct-zone';
-      msg.className = 'result-msg correct';
-      msg.textContent = '🎉 정답입니다!';
-    } else {
-      zone.className = 'answer-zone wrong-zone';
+    markCorrect(zone, answerBlocks, want[0]);
+    zone.className = 'answer-zone ' + (isCorrect ? 'correct-zone' : 'wrong-zone');
+  } else {
+    const letters = parts.map((_, k) => PART_LETTERS[k]).join(', ');
+    if (mAnswer.some(a => !a.length)) {
       msg.className = 'result-msg wrong';
-      msg.textContent = '❌ 틀렸어요!';
-      setTimeout(() => { if (checked) msg.textContent = '💡 정답: ' + correctBlocks.join(' → '); }, 1100);
+      msg.textContent = `⚠️ ${letters} 모두 블록을 배치해주세요!`;
+      return;
     }
+    if (mAnswer.some((a, k) => a.length < want[k].length)) {
+      msg.className = 'result-msg wrong';
+      msg.textContent = '⚠️ 모든 블록을 배치해주세요!';
+      return;
+    }
+    checked = true;
+    const oks = mAnswer.map((a, k) => JSON.stringify(a) === JSON.stringify(want[k]));
+    isCorrect = oks.every(Boolean);
+    parts.forEach((p, k) => {
+      const zone = document.getElementById('mAns' + k);
+      markCorrect(zone, mAnswer[k], want[k]);
+      zone.className = 'answer-zone ' + (oks[k] ? 'correct-zone' : 'wrong-zone');
+    });
+  }
+
+  if (isCorrect) {
+    if (!correctSet.has(quizIdx)) { correctSet.add(quizIdx); score = correctSet.size; document.getElementById('scoreVal').textContent = score; }
+    msg.className = 'result-msg correct';
+    msg.textContent = '🎉 정답입니다!';
+  } else {
+    msg.className = 'result-msg wrong';
+    msg.textContent = '❌ 틀렸어요!';
+    setTimeout(() => {
+      if (!checked) return;
+      msg.textContent = parts.length === 1
+        ? '💡 정답: ' + want[0].join(' → ')
+        : '💡 ' + want.map((w, k) => PART_LETTERS[k] + ': ' + w.join(' → ')).join(' / ');
+    }, 1100);
   }
   document.getElementById('btnCheck').style.display = 'none';
   document.getElementById('btnNext').style.display = 'flex';
